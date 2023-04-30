@@ -3,7 +3,7 @@ class Journal
 
 
 {
-    List<string> entries;
+    List<Entry> entries;
 
     public Journal()
 {
@@ -19,7 +19,7 @@ public void DeployJournal()
 }
 public void CreateJournal()
 {
-    string entry = "myFile.txt";
+    string entry = "entry.txt";
 
     using (StreamWriter outputFile = new StreamWriter(entry))
         {
@@ -27,14 +27,22 @@ public void CreateJournal()
             outputFile.WriteLine();
         }
 
-public void Save()
+public void Save(List<Entry>entries)
 {
+    string filename = "entry.txt";
 
+    using (StreamWriter outputFile = new StreamWriter(filename))
+
+    foreach (Entry entry in entries)
+    {
+        outputFile.WriteLine();
+    }
 }
 
 public void Load()
 {
 
+}
 }
 }
 

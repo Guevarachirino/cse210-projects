@@ -4,6 +4,9 @@ class Entry
 
     public Entry(string _date, string _prompt, string _response)
     {
+        date = _date;
+        prompt = _prompt;
+        response = _response;
 
     }
 

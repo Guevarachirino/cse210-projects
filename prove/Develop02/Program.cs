@@ -6,9 +6,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop02 World!");
 
-        journal        journal = new journal();
+        Journal        journal = new Journal();
         int            menuanswer = 0;
 
         List<string>   menu = new List<string>
@@ -24,16 +23,28 @@ class Program
         };
 
 
-        while (menuinput !=5)
+        while (menuanswer !=5)
         {
-            foreach (string menuanswer in menu)
+            foreach (string menuinput in menu)
             {
-                Console.WriteLine(menuanswer);
+                Console.WriteLine(menuinput);
             }
 
-            menuinput = int.Parse(Console.ReadLine());
+            menuanswer = int.Parse(Console.ReadLine());
 
-            switch
+            switch (menuanswer)
+            {
+                case 1: 
+                    journal.CreateJournal();
+                    break;
+
+                case 2:
+                    journal.DeployJournal();
+                    break;
+                
+
+
+            }
         }
         
     }
